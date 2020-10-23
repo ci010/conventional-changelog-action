@@ -1,0 +1,39 @@
+name: 'Conventional Changelog Action'
+description: 'Bump version, and generates changelog with conventional commits.'
+author: 'ci010'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'edit'
+  color: 'red'
+
+inputs:
+  github-token:
+    description: 'Github token'
+    required: true
+
+  version:
+    description: 'The version to bump'
+    required: false
+    default: ''
+
+  tag-prefix:
+    description: 'Prefix that is used for the git tag'
+    default: 'v'
+    required: false
+
+  config-file-path:
+    description: 'Path to the conventional changelog config file. If set, the preset setting will be ignored'
+    required: false
+
+outputs:
+  changelog:
+    description: 'The generated changelog for the new version'
+  clean_changelog:
+    description: 'The generated changelog for the new version without the version name in it'
+  version:
+    description: 'The new version'
+  skipped:
+    description: 'boolean to check if this step have been skipped'

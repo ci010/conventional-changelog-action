@@ -1,0 +1,42 @@
+{
+  "name": "conventional-changelog-action",
+  "version": "0.0.1",
+  "description": "Github Action that generates a changelog with the Conventional Changelog CLI",
+  "keywords": [
+    "actions",
+    "changelog",
+    "commits",
+    "conventional",
+    "github"
+  ],
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist",
+    "run": "node dist/index.js"
+  },
+  "homepage": "https://github.com/ci010/conventional-changelog-action#readme",
+  "bugs": {
+    "url": "https://github.com/ci010/conventional-changelog-action/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ci010/conventional-changelog-action.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ci010",
+    "email": "cijhn@hotmail.com"
+  },
+  "main": "dist/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/conventional-changelog-core": "^4.1.1",
+    "@types/semver": "^7.3.4",
+    "@types/node": "^14.14.0",
+    "@vercel/ncc": "^0.24.1",
+    "conventional-changelog-conventionalcommits": "^4.4.0",
+    "conventional-recommended-bump": "6.0.10",
+    "conventional-changelog-core": "^4.2.0",
+    "@actions/core": "1.2.6",
+    "semver": "^6.0.0"
+  }
+}
